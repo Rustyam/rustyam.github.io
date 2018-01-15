@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel='stylesheet' href='/css/calculator.css' type='text/css'>
+        
+        <script src="/js/element_generator.js"></script>
+        <script src="/js/calculator.js"></script>
+        <script>
+            window.onload = function(){
+                
+                calculator('#calc').init(
+                    {
+                        line : {
+                            spriteSrc : 'img/sprite.png',
+                            offset : {
+                                x : 36,
+                                y : 20
+                            },
+                            interval : '39',
+                        },
+                        summands : {
+                           a : {
+                               minValue : 6,
+                               maxValue : 9,
+                           },
+                           b : {
+                               minValue : 'result.minValue - summands.a.value',
+                               maxValue : 'result.maxValue - summands.a.value',
+                           },
+                        },
+                        result : {
+                            minValue : 11,
+                            maxValue : 14
+                        }
+                    }
+                );
+            }
+        </script>
+    </head>
+    <body>
+        <div id='calc'></div>
+    </body>
+</html>
