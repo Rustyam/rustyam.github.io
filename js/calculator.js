@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 ;
-(function(){
-    
+(function(){   
     var counter = _getCounter();
     
     function calculator(selector) {
